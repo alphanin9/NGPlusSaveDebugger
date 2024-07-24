@@ -4,7 +4,6 @@
 #include "Windows.h"
 #include "shlobj_core.h"
 
-#include <chrono>
 #include <cstdio>
 
 void SpewSavedGamesPaths() noexcept {
@@ -33,7 +32,6 @@ int main() noexcept {
     Context::m_streamOpen = true;
 
     Context::Spew("Running NG+ save metadata debug tool...");
-    Context::Spew("Time: {}", std::chrono::zoned_time{ std::chrono::current_zone(), std::chrono::system_clock::now() }.get_local_time());
 
     SpewSavedGamesPaths();
 
